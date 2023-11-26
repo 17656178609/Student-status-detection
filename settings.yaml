@@ -1,0 +1,7 @@
+datasets_dir: C:\Code\pycharm\ultralytics-main\datasets
+weights_dir: weights
+runs_dir: runs
+uuid: c83f7c09d5fb9d2422dff3f68bd13d12fa88b216f6088537d73efad4268efbe8
+sync: true
+api_key: ''
+settings_version: 0.0.3
