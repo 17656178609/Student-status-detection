@@ -7,7 +7,7 @@ FROM pytorch/pytorch:2.1.0-cuda12.1-cudnn8-runtime
 RUN pip install --no-cache nvidia-tensorrt --index-url https://pypi.ngc.nvidia.com
 
 # Downloads to user config dir
-ADD https://ultralytics.com/assets/Arial.ttf https://ultralytics.com/assets/Arial.Unicode.ttf /root/.config/Ultralytics/
+ADD https://ultralytics.com/assets/Arial.ttf https://ultralytics.com/assets/Arial.Unicode.ttf /root/.config/Classroom-behavior-detection/
 
 # Install linux packages
 # g++ required to build 'tflite_support' and 'lap' packages, libusb-1.0-0 required for 'tflite_support' package
@@ -19,12 +19,12 @@ RUN apt update \
 RUN apt upgrade --no-install-recommends -y openssl tar
 
 # Create working directory
-WORKDIR /usr/src/ultralytics
+WORKDIR /usr/src/Classroom-behavior-detection
 
 # Copy contents
 # COPY . /usr/src/ultralytics  # git permission issues inside container
-RUN git clone https://github.com/17656178609/Classroom-behavior-detection.git /usr/src/ultralytics
-ADD https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt /usr/src/ultralytics/
+RUN git clone https://github.com/17656178609/Classroom-behavior-detection.git /usr/src/Classroom-behavior-detection
+ADD https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt /usr/src/Classroom-behavior-detection/
 
 # Install pip packages
 RUN python3 -m pip install --upgrade pip wheel
