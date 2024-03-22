@@ -701,19 +701,6 @@ class Concat(nn.Module):
         """Forward pass for the YOLOv8 mask Proto module."""
         return torch.cat(x, self.d)
 
-from efficientnet_pytorch.model import MemoryEfficientSwish
-
-class AttnMap(nn.Module):
-    def __init__(self, dim):
-        super().__init__()
-        self.act_block = nn.Sequential(
-                            nn.Conv2d(dim, dim, 1, 1, 0),
-                            MemoryEfficientSwish(),
-                            nn.Conv2d(dim, dim, 1, 1, 0)
-                         )
-    def forward(self, x):
-        return self.act_block(x)
-
 class EfficientAttention(nn.Module):
     def __init__(self, dim, num_heads=8, group_split=[4, 4], kernel_sizes=[5], window_size=4, 
                  attn_drop=0., proj_drop=0., qkv_bias=True):
