@@ -1,0 +1,13 @@
+train: /home/chenhaiwei/resources/STD4/train/images
+val: /home/chenhaiwei/resources/STD4/valid/images
+test: /home/chenhaiwei/resources/STD4/test/images
+
+nc: 6
+names: ['0 Handrise', '1 Read', '2 Write', '3 Stand', '4 Talk', '5 Discuss']
+
+roboflow:
+  workspace: dataset-mz9ad
+  project: student2
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/dataset-mz9ad/student2/dataset/2

@@ -1,0 +1,13 @@
+train: /home/chenhaiwei/resources/STD5/train/images
+val: /home/chenhaiwei/resources/STD5/valid/images
+test: /home/chenhaiwei/resources/STD5/test/images
+
+nc: 9
+names: ['Using_phone', 'bend', 'bow_head', 'hand-raising', 'reading', 'sleep', 'turn_head', 'upright', 'writing']
+
+roboflow:
+  workspace: noumancs192043
+  project: class-monitoring
+  version: 4
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/noumancs192043/class-monitoring/dataset/4

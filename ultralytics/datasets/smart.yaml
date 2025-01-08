@@ -1,0 +1,12 @@
+train: /home/chenhaiwei/resources/smart/train/images
+val: /home/chenhaiwei/resources/smart/val/images
+
+nc: 7
+names: ['person', 'dx', 'js', 'tt', 'xt', 'zl', 'zt']
+
+roboflow:
+  workspace: smart-ky9w1
+  project: smart12
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/smart-ky9w1/smart12/dataset/2

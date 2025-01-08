@@ -2,13 +2,13 @@
 # Default training settings and hyperparameters for medium-augmentation COCO training
 
 task: detect  # YOLO task, i.e. detect, segment, classify, pose
-mode: predict  # YOLO mode, i.e. train, val, predict, export, track, benchmark
+mode: train  # YOLO mode, i.e. train, val, predict, export, track, benchmark
 
 # Train settings -------------------------------------------------------------------------------------------------------
-model: yolov8n.pt # path to model file, i.e. yolov8n.pt, yolov8n.yaml
-data:   # path to data file, i.e. coco128.yaml
+model: /home/chenhaiwei/code/Student-status-detection/ultralytics/models/v8/yolov8x_c2f_res2block_ema.yaml # path to model file, i.e. yolov8n.pt, yolov8n.yaml
+data:  /home/chenhaiwei/code/Student-status-detection/ultralytics/datasets/smart.yaml # path to data file, i.e. coco128.yaml
 epochs: 400  # number of epochs to train for
-patience: 50  # epochs to wait for no observable improvement for early stopping of training
+patience: 30  # epochs to wait for no observable improvement for early stopping of training
 batch: 4  # number of images per batch (-1 for AutoBatch)
 imgsz: 640  # size of input images as integer or w,h
 save: True  # save train checkpoints and predict results
@@ -24,7 +24,7 @@ optimizer: SGD  # optimizer to use, choices=['SGD', 'Adam', 'AdamW', 'RMSProp']
 verbose: True  # whether to print verbose output
 seed: 1234  # random seed for reproducibility
 deterministic: True  # whether to enable deterministic mode
-single_cls: False  # train multi-class data as single-class
+single_cls: True  # train multi-class data as single-class
 image_weights: True  # use weighted image selection for training
 rect: False  # rectangular training if mode='train' or rectangular validation if mode='val'
 cos_lr: False  # use cosine learning rate scheduler

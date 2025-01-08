@@ -1,0 +1,13 @@
+train: /home/chenhaiwei/resources/teacher/train/images
+val: /home/chenhaiwei/resources/teacher/valid/images
+test: /home/chenhaiwei/resources/teacher/test/images
+
+nc: 6
+names: ['0', '1', '2', '3', '4', '5']
+
+roboflow:
+  workspace: yongtao-xia-yyymv
+  project: teacher-20241210
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yongtao-xia-yyymv/teacher-20241210/dataset/2
